@@ -1,7 +1,7 @@
 {
     "expo": {
         "name": "Esperoj Quizzor",
-        "slug": "Esperoj Quizzor",
+        "slug": "Esperoj-Quizzor",
         "version": "0.0.0",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
