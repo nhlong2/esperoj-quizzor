@@ -15,6 +15,6 @@ build_task:
     fingerprint_script: cat package-lock.json
     populate_script: npm install
   login_script: expo login -u $USERNAME -p $PASSWORD --non-interactive
-  build_script: expo "build:$PLATHFORM" --release-channel dev --config ./app.json --no-wait
+  build_script: expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait
   web_build_artifacts:
     path: "web-build/*"
