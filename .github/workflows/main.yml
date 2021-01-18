@@ -18,4 +18,5 @@ jobs:
           expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
           expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
       - run: npm install
-      - run: expo build:android --release-channel alpha
+      - run: expo build:android --release-channel dev -t app-bundle --no-wait
+      - run: expo build:web -c
