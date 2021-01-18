@@ -1,0 +1,20 @@
+container:
+  image: patwoz/expo-cli:latest
+  cpu: 2
+  memory: 3G
+  use_in_memory_disk: true
+build_task:
+  environment:
+    USERNAME: ENCRYPTED[816e19d5ad8f8cb65915a18048a3e7e122e7a13cfb7137932eab0cff57624b672bf31199c120b5db0e1120859f1ce248]
+    PASSWORD: ENCRYPTED[4d2ba7c7bb380bbae1b970425dce4894dd1374fcad067c4a68d4a93cd123b0f9b00d37f047b708d3b852873044c025b5]
+    matrix:
+      - PLATFORM: android
+      - PLATFORM: web
+  node_modules_cache:
+    folder: node_modules
+    fingerprint_script: cat package-lock.json
+    populate_script: npm install
+  login_script: expo login -u $USERNAME -p $PASSWORD --non-interactive
+  build_script: expo "build:$PLATHFORM" --release-channel dev --config ./app.json --no-wait
+  web_build_artifacts:
+    path: "web-build/*"
