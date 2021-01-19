@@ -1,6 +1,6 @@
 build_mobile_task:
   container:
-    dockerfile: Dockerfile
+    dockerfile: ci/Dockerfile
     cpu: 2.5
     memory: 2560Mi
     use_in_memory_disk: true
@@ -18,7 +18,7 @@ build_mobile_task:
 
 publish_web_task:
   container:
-    dockerfile: Dockerfile
+    dockerfile: ci/Dockerfile
     cpu: 1
     memory: 1536Mi
     use_in_memory_disk: true
