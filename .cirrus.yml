@@ -18,6 +18,6 @@ build_task:
   build_script: |
     if [ $PLATFORM = web ]; then expo build:web; fi
     if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fispeedtest
-	uptime
-	lscpu
+    uptime
+    lscpu
 	

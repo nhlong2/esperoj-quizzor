@@ -1,6 +1,6 @@
 #Custom
 tmp
-.expo
+.expo/web/cache/**
 
 # Logs
 logs
