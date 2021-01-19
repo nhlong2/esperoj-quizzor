@@ -1,7 +1,7 @@
 container:
   image: patwoz/expo-cli:latest
-  cpu: 2
-  memory: 3G
+  cpu: 1
+  memory: 2560Mi
   use_in_memory_disk: true
 build_task:
   environment:
@@ -17,4 +17,7 @@ build_task:
   login_script: expo login -u $USERNAME -p $PASSWORD --non-interactive
   build_script: |
     if [ $PLATFORM = web ]; then expo build:web; fi
-    if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fi
+    if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fispeedtest
+	uptime
+	lscpu
+	
