@@ -17,6 +17,6 @@ build_task:
   login_script: expo login -u $USERNAME -p $PASSWORD --non-interactive
   build_script: |
     if [ $PLATFORM = web ]; then expo build:web; fi
-    if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fispeedtest
+    if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fi;
     uptime
     lscpu
