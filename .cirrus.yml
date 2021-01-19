@@ -20,4 +20,3 @@ build_task:
     if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fispeedtest
     uptime
     lscpu
-	
