@@ -1,6 +1,6 @@
 container:
   image: patwoz/expo-cli:latest
-  cpu: 3
+  cpu: 2
   memory: 3G
   use_in_memory_disk: true
 build_task:
@@ -18,5 +18,3 @@ build_task:
   build_script: |
     if [ $PLATFORM = web ]; then expo build:web; fi
     if [ $PLATFORM = android ]; then expo "build:$PLATFORM" --release-channel dev --config ./app.json --no-wait; fi
-  web_build_artifacts:
-    path: "web-build/**"
