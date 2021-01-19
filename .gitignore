@@ -1,7 +1,7 @@
 #Custom
 tmp
 .expo/web/cache/**
-
+web-build/**
 # Logs
 logs
 *.log
@@ -106,3 +106,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+.vercel
