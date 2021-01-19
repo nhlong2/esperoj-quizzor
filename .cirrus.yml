@@ -19,8 +19,8 @@ build_mobile_task:
 publish_web_task:
   container:
     dockerfile: ci/Dockerfile
-    cpu: 2
-    memory: 2G
+    cpu: 3
+    memory: 4G
     use_in_memory_disk: true
   environment:
     USERNAME: ENCRYPTED[816e19d5ad8f8cb65915a18048a3e7e122e7a13cfb7137932eab0cff57624b672bf31199c120b5db0e1120859f1ce248]
@@ -31,6 +31,9 @@ publish_web_task:
     folder: node_modules
     fingerprint_script: cat package-lock.json
     populate_script: npm install
+  web_build_cache:
+    folder: .expo/web/cache
+    fingerprint_script: cat package-lock.json
   login_script: expo login -u $USERNAME -p $PASSWORD --non-interactive
   build_web_script: expo build:web
   publish_to_vercel_script: |
