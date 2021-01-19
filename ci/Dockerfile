@@ -1,2 +1,2 @@
-FROM node:14.15.4
-RUN npm install -g expo-cli sharp-cli -unsafe-perm
+FROM node:current-buster
+RUN npm install -g expo-cli@latest sharp-cli -unsafe-perm
