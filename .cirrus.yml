@@ -2,7 +2,7 @@ build_mobile_task:
   container:
     dockerfile: ci/Dockerfile
     cpu: 2.6
-    memory: 2560Mi
+    memory: 2660Mi
     use_in_memory_disk: true
   environment:
     USERNAME: ENCRYPTED[816e19d5ad8f8cb65915a18048a3e7e122e7a13cfb7137932eab0cff57624b672bf31199c120b5db0e1120859f1ce248]
