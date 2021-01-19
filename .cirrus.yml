@@ -1,7 +1,7 @@
 build_mobile_task:
   container:
     dockerfile: ci/Dockerfile
-    cpu: 2.6
+    cpu: 2.5
     memory: 2660Mi
     use_in_memory_disk: true
   environment:

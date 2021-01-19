@@ -2,7 +2,7 @@
 tmp
 .expo/web/cache/**
 web-build/**
-.expo/**
+.expo
 
 # Logs
 logs
