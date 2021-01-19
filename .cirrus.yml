@@ -13,14 +13,14 @@ build_mobile_task:
     populate_script: npm install
   login_script: expo login -u $USERNAME -p $PASSWORD --non-interactive
   build_script: |
-    expo build:andoroid --release-channel dev --config ./app.json --no-wait
+    expo build:android --release-channel dev --config ./app.json --no-wait
     uptime
 
 publish_web_task:
   container:
     dockerfile: ci/Dockerfile
-    cpu: 1
-    memory: 1536Mi
+    cpu: 2
+    memory: 2G
     use_in_memory_disk: true
   environment:
     USERNAME: ENCRYPTED[816e19d5ad8f8cb65915a18048a3e7e122e7a13cfb7137932eab0cff57624b672bf31199c120b5db0e1120859f1ce248]
