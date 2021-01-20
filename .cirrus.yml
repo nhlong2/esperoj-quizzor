@@ -23,6 +23,7 @@ publish_web_task:
     cpu: 1
     memory: 2700Mi
     use_in_memory_disk: true
+  env:
     CONFIG: ENCRYPTED[51f7c788c0663eaf8fd0de2638452ddb5fb5565febc8df3f526022ed304294b0295171f210c004e29946aa79a2da4f62]
     TOKEN: ENCRYPTED[ceaf370b4f3962acabf75f17745ba3467b4c45f1c897a8331f0c2c8aa0ee963112dc696c6820dc543a8de4e72c05118c]
   node_modules_cache:
