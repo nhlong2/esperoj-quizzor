@@ -23,8 +23,5 @@
     "eslint-config-expo": "^6.0.0",
     "prettier": "^2.2.1"
   },
-  "private": true,
-  "eslintConfig": {
-    "extends": "expo"
-  }
+  "private": true
 }
