@@ -1,8 +1,8 @@
 #Custom
 tmp
-.expo/web/cache/**
-web-build/**
-
+.expo
+web-build
+android
 
 # Logs
 logs
