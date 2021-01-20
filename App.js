@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
@@ -23,7 +22,6 @@ export default function App() {
                     color="green"
                     accessibilityLabel="Learn more about this green button"
                 />
-                <StatusBar style="auto" />
             </View>
         </Sentry.ErrorBoundary>
     );
