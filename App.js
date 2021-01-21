@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 import * as Sentry from '@sentry/react';
-import * as PouchDB from 'pouchdb';
+import PouchDB from 'pouchdb';
 
 
 Sentry.init({
