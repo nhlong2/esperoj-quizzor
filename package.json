@@ -22,7 +22,8 @@
     "babel-eslint": "latest",
     "eslint": "latest",
     "prettier": "latest",
-    "expo-cli": "latest"
+    "expo-cli": "latest",
+    "vercel": "latest"
   },
   "private": false
 }
