@@ -5,7 +5,7 @@ environment:
 build_mobile_task:
   container:
     dockerfile: ci/Dockerfile
-    cpu: 2.7
+    cpu: 3
     memory: 2660Mi
     use_in_memory_disk: true
   node_modules_cache:
@@ -21,7 +21,7 @@ publish_web_task:
   container:
     dockerfile: ci/Dockerfile
     cpu: 1
-    memory: 2700Mi
+    memory: 1G
     use_in_memory_disk: true
   env:
     CONFIG: ENCRYPTED[51f7c788c0663eaf8fd0de2638452ddb5fb5565febc8df3f526022ed304294b0295171f210c004e29946aa79a2da4f62]
