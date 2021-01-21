@@ -21,7 +21,7 @@ publish_web_task:
   container:
     dockerfile: ci/Dockerfile
     cpu: 1
-    memory: 1G
+    memory: 2500Mi
     use_in_memory_disk: true
   env:
     CONFIG: ENCRYPTED[51f7c788c0663eaf8fd0de2638452ddb5fb5565febc8df3f526022ed304294b0295171f210c004e29946aa79a2da4f62]
