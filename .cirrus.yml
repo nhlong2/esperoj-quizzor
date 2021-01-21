@@ -10,8 +10,8 @@ build_mobile_task:
     use_in_memory_disk: true
   node_modules_cache:
     folder: node_modules
-    fingerprint_script: cat package-lock.json
-    populate_script: npm install
+    fingerprint_script: cat yarn.lock
+    populate_script: yarn install
   login_script: expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD --non-interactive
   build_script: |
     npx expo-optimize
@@ -28,11 +28,11 @@ publish_web_task:
     TOKEN: ENCRYPTED[ceaf370b4f3962acabf75f17745ba3467b4c45f1c897a8331f0c2c8aa0ee963112dc696c6820dc543a8de4e72c05118c]
   node_modules_cache:
     folder: node_modules
-    fingerprint_script: cat package-lock.json
-    populate_script: npm install
+    fingerprint_script: cat yarn.lock
+    populate_script: yarn install
   web_build_cache:
     folder: .expo/web/cache
-    fingerprint_script: cat package-lock.json
+    fingerprint_script: cat yarn.lock
   login_script: expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD --non-interactive
   build_web_script: expo build:web
   publish_to_vercel_script: |
