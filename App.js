@@ -38,7 +38,7 @@ async function get_access_token(api_key) {
 async function connect_database(url, headers, access_token) {
   const db = new PouchDB(url, {
     fetch: function (uri, opts) {
-      for (const header in header) {
+      for (const header in headers) {
         opts.headers.set(header[0], header[1]);
       }
       opts.headers.set('Accept', '*/*');
@@ -56,6 +56,7 @@ async function connect_database(url, headers, access_token) {
       console.log(info);
     })
     .catch((err) => {
+    sentry.captureException(err)
       console.log(err);
     });
   return db;
