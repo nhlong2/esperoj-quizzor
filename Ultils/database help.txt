@@ -1,0 +1,17 @@
+const db = new PouchDB(url, {
+      fetch: function (uri, opts) {
+        for (const header in headers) {
+          opts.headers.set(header[0], header[1]);
+        }
+        opts.credentials = 'omit';
+        opts.headers.set('Accept', '*/*');
+        opts.headers.set('Accept-Encoding', 'deflate, gzip');
+        //      opts.headers.set('Accept', 'application/json');
+        opts.headers.set('Authorization', 'Bearer ' + access_token);
+        return PouchDB.fetch(uri, opts).catch((error) =>
+          Sentry.captureException(`error at ${uri}`)
+        );
+      },
+    });
+    // test script
+    return db;
