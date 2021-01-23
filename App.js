@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Dashboard from './Components/Dashboard';
 import NewQuiz from './Components/NewQuiz';
 import * as Sentry from '@sentry/react';
@@ -13,21 +13,21 @@ Sentry.init({
 
 //Sentry.captureException("hello there");
 
-(async () => {
-  while (true) {
-    const DB = new Database({ type: 'CouchDB' }),
-      files_db = DB.connect({ host: 'files' });
-    if (files_db !== null) {
-      break;
-    } else {
-      alert('cant connect to the database');
-    }
-  }
-})();
-
 const Stack = createStackNavigator();
 
 export default function App() {
+  useEffect(async () => {
+    while (true) {
+      const DB = new Database({ type: 'CouchDB' }),
+        files_db = await DB.connect({ host: 'files' });
+      if (files_db !== null) {
+//        alert(JSON.stringify(files_db));
+        break;
+      } else {
+        throw new Error("Can't connect to the database")
+      }
+    }
+  });
   return (
     <Sentry.ErrorBoundary fallback={'An error has occurred'}>
       <NavigationContainer>
